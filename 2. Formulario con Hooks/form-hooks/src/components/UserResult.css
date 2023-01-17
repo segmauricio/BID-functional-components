@@ -1,0 +1,27 @@
+.results{
+    width: 400px;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+h4{
+    text-align: center;
+}
+.result-card{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.result-card p{
+    color: black;
+    text-align: center;
+    width: 100px;
+}
+.result-card span{
+    padding-left: 15px;
+    border-style: none;
+    height: 25px;
+    width: 220px;
+    border-radius: 5px;
+    border-color: #cecece;
+}
