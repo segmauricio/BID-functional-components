@@ -1,0 +1,39 @@
+.colorPicker{
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 350px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.colorPicker label{
+    font-weight: bold;
+}
+.colorInput{
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 30px;
+    background-color: #efefef;
+    border-radius: 5px;
+    border-style: none;
+    padding-left: 10px;
+}
+.dimensionInput{
+    font-size: 10px;
+    width: 55px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 30px;
+    background-color: #efefef;
+    border-radius: 5px;
+    border-style: none;
+}
+.colorPicker button{
+    height: 30px;
+    width: 60px;
+    background-color: white;
+    border-radius: 5px;
+    border-color: #e7e7e7;
+    color: black;
+}

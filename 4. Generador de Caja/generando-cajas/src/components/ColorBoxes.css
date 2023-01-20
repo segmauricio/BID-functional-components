@@ -1,0 +1,15 @@
+.boxes{
+    margin: 0 auto;
+    width: 95%;
+}
+
+.boxes ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.boxes li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
