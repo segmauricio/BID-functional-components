@@ -1,0 +1,26 @@
+.tabForm{
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.tabWindows{
+    display: flex;
+}
+.tabs{
+    width: 100px;
+    height: 40px;
+    margin: 0 5px 0 5px;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 250ms ease-in-out;
+    animation: fadeInOut, moveLeft300px, bounce;
+}
+.tabs:hover, .tabs-active{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
