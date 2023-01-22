@@ -8,24 +8,19 @@ const UserForm = ({ lista, setLista }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        let data = {
-            colour: colour,
-            dimension: dimension
+        if (colour && dimension) {
+            let data = {
+                colour,
+                dimension
+            }
+            setLista([...lista, data]);
+            setColour("");
+            setDimension("");
         }
-
-        let aux = [...lista]
-        aux.push(data);
-        console.log(aux);
-        setLista([...aux]);
-
-        setColour("");
-        setDimension("");
     };
 
-    
-    
     return (
-        <form onSubmit={ handleSubmit }>
+        <form onSubmit={handleSubmit}>
             <div className='colorPicker'>
                 <label>Color</label>
                 <input
@@ -33,16 +28,16 @@ const UserForm = ({ lista, setLista }) => {
                     className='colorInput'
                     name='color'
                     placeholder='Enter a valid color here'
-                    onChange={ (e) => setColour(e.target.value) }
-                    value={ colour }>
+                    onChange={(e) => setColour(e.target.value.trim())}
+                    value={colour}>
                 </input>
                 <input
                     type='text'
                     className='dimensionInput'
                     name='dimension'
                     placeholder='Dimensions'
-                    onChange={ (e) => setDimension(e.target.value) }
-                    value={ dimension }></input>
+                    onChange={(e) => setDimension(e.target.value.trim())}
+                    value={dimension}></input>
                 <button type="submit">Add</button>
             </div>
         </form>

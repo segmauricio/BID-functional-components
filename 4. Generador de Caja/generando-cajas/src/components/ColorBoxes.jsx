@@ -7,39 +7,34 @@ const ItemColor = (props) => {
     return (
         <div>
             <li>
-                <div style={{backgroundColor:props.colour, height: props.dimension+'px', width: props.dimension+'px'}}></div>
+                <div style={{ backgroundColor: props.colour, height: props.dimension + 'px', width: props.dimension + 'px' }}></div>
             </li>
         </div>
-        
     )
 }
 
 const ColorBoxes = () => {
 
-    const [lista, setLista] = useState([]);
-
+    const [lista, setLista] = useState([]); 
     return (
+        <>
         <div>
-            <div>
-                <div>
-                    <UserForm lista={lista} setLista={setLista} />
-                </div>
-                <div className='boxes'>
-                    <ul>
-                        {
-                            lista.map((item, idx, arr) => {
-                                console.log(idx, item, arr);
-                                return (
-                                    <Fragment key={item + idx}>
-                                        <ItemColor {...item} />
-                                    </Fragment>
-                                )
-                            })
-                        }
-                    </ul>
-                </div>
-            </div>
+            <UserForm lista={lista} setLista={setLista} />
         </div>
+        <div className='boxes'>
+            <ul>
+                {
+                    lista.map((item, idx) => {
+                        return (
+                            <Fragment key={idx}>
+                            <ItemColor {...item} />
+                            </Fragment>
+                        )
+                    })
+                }
+            </ul>
+        </div>
+        </>
     )
 }
 
